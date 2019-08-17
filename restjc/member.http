@@ -1,0 +1,26 @@
+@base = {{$processEnv %restjcBaseUrl}}
+@member = testmem
+
+### 取得
+{{ base }}/members
+  ?
+  &id={{member}}
+
+### 登録
+
+POST {{ base }}/member
+Content-Type: application/x-www-form-urlencoded
+
+&id={{member}}
+&name=てすと
+&name_en=Test
+&picture=http://test.png
+&season=77
+&comment=こめんとてすと
+
+### 削除
+
+POST {{ base }}/member/delete
+Content-Type: application/x-www-form-urlencoded
+
+id={{member}}

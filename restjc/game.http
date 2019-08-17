@@ -1,0 +1,27 @@
+@base = {{$processEnv %restjcBaseUrl}}
+@event = camp20
+@game = gameid
+
+### 取得
+{{ base }}/games
+  ?
+  &event={{event}}
+  &member=gg.ymok
+
+### 登録
+
+POST {{ base }}/game
+Content-Type: application/x-www-form-urlencoded
+
+&member=maman.nuruno.gg.ymok
+&score=10.20.30.-60
+&event={{event}}
+&id={{game}}
+
+
+### 削除
+
+POST {{ base }}/game/delete
+Content-Type: application/x-www-form-urlencoded
+
+id={{game}}

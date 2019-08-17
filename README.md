@@ -1,2 +1,4 @@
-# httppack
-Package of http files
+httppack
+========
+
+Package of http files.

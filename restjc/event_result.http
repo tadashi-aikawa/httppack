@@ -1,0 +1,24 @@
+@base = {{$processEnv %restjcBaseUrl}}
+@event = camp20
+@member = nuruno
+
+### 取得
+{{ base }}/event/results
+  ?
+  &event={{event}}
+
+### 登録
+
+POST {{ base }}/event/result
+Content-Type: application/x-www-form-urlencoded
+
+&member={{member}}
+&event={{event}}
+
+### 削除
+
+POST {{ base }}/event/result/delete
+Content-Type: application/x-www-form-urlencoded
+
+&member={{member}}
+&event={{event}}

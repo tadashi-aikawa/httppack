@@ -1,0 +1,23 @@
+@base = {{github}}
+@クエリ = jumeaux+language:python
+@所有者 = tadashi-aikawa
+@リポジトリ名 = jumeaux
+
+###
+
+// 検索
+{{ base }}/search/repositories
+  ?
+  &q={{クエリ}}
+  &sort=stars
+  &order=desc
+
+###
+
+// コミット情報
+{{ base }}/repos/{{ 所有者 }}/{{ リポジトリ名 }}/commits
+
+###
+
+// リリース情報
+{{ base }}/repos/{{ 所有者 }}/{{ リポジトリ名 }}/releases
